@@ -1,0 +1,80 @@
+.portfolioTitle{
+    position: absolute;
+    top: -50px;
+    font-family: var(--fond);
+    font-size: 32px;
+    font-weight: 600;
+    color: #fafafa;
+
+    position: relative;
+}
+
+.portfolioTitle::after{
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+
+    width: 40px;
+    height: 6px;
+    /* background-color: #FFDB70; */
+    background: linear-gradient(90deg, #FFDB70, #ffae70 90%);
+    border-radius: 5px;
+}
+
+.portfolioMain{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.portfolioMain a:hover img{
+    width: 105%;
+    height: 105%;
+}
+
+/* .portfolioMain a:hover .projectCart{
+    border: 1px solid #FFDB70;
+} */
+
+.portfolioMain a:hover .projectCart::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #0005;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.projectCart{
+    position: relative;
+    width: 260px;
+    height: 195px;
+    border-radius: 16px;
+    overflow: hidden;
+    background-color: #2e2e2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-out;
+}
+
+.projectCart img{
+    width: 95%;
+    height: 95%;
+    border-radius: 16px;
+    transition: 0.3s ease-out;
+}
+
+
+.portfolioMain h5{
+    font-family: var(--fond);
+    font-size: 15px;
+    font-weight: 500;
+    color: #fafafa;
+    margin-top: 15px;
+    margin-left: 10px;
+}

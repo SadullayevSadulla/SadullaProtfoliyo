@@ -1,0 +1,265 @@
+:root {
+    --fond: "Inter";
+}
+
+.resumeTitle{
+    position: absolute;
+    top: -50px;
+    font-family: var(--fond);
+    font-size: 32px;
+    font-weight: 600;
+    color: #fafafa;
+
+    position: relative;
+}
+
+.resumeTitle::after{
+    content: "";
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+
+    width: 40px;
+    height: 6px;
+    background: linear-gradient(90deg, #FFDB70, #ffae70 90%);
+    border-radius: 5px;
+}
+
+.education{
+    margin-top: 5px;
+}
+
+.educationTitle{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.educationTitle h3{
+    font-family: var(--fond);
+    font-size: 24px;
+    font-weight: 600;
+    color: #fafafa;
+}
+
+.educationLogo{
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 46px;
+    height: 46px;
+    background-color: #252527;
+    border-radius: 14px;
+    position: relative; 
+}
+
+.educationLogo::after{
+    content: "";
+    width: 1px;
+    height: 150px;
+    background-color: #ffdb7042;
+    position: absolute;
+    top: 46px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.educationLogo::before{
+    content:"";
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,0) 40%
+    );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+
+  padding: 2px;
+}
+
+.educationList1{
+    margin-top: 30px;
+    margin-left: 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.list1Title{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.educationList1 h5{
+    font-family: var(--fond);
+    font-size: 16px;
+    color: #fafafa;
+}
+
+.educationList1 span{
+    font-family: var(--fond);
+    color: #FFDB70;
+    margin-left: 46px;
+}
+
+.educationList1 p{
+    margin-left: 46px;
+    font-family: var(--fond);
+    font-weight: 300;
+    color: #d6d6d6;
+}
+
+.list1Check{
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    background-color: #FFDB70;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.list1Check::before{
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 15px;
+    background-color: #ffdb7019;
+    position: absolute;
+}
+
+.mySkillsTitle{
+    padding-block: 35px 25px;
+    font-family: var(--fond);
+    font-size: 24px;
+    font-weight: 600;
+    color: #fafafa;
+}
+
+.devLangguages{
+    width: 840px;
+    height: 220px;
+    background-color: #252527;
+    border-radius: 14px;
+    position: relative; 
+    box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.266);
+}
+
+.devLangguages1{
+    width: 840px;
+    height: 430px;
+    background-color: #252527;
+    border-radius: 14px;
+    position: relative; 
+    box-shadow: 5px 5px 35px rgba(0, 0, 0, 0.266);
+}
+
+.devLangguages1::before{
+     content:"";
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,0) 40%
+    );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+
+  padding: 2px;
+}
+
+.devLangguages::before{
+     content:"";
+  position:absolute;
+  inset:0;
+  border-radius:14px;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.10),
+      rgba(255,255,255,0) 40%
+    );
+
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+
+  padding: 2px;
+}
+
+.devLangguages h5{
+    margin-left: 30px;
+    padding-top: 30px;
+    font-family: var(--fond);
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffdb70;
+}
+
+.devLangguages1 h5{
+    margin-left: 30px;
+    padding-top: 30px;
+    font-family: var(--fond);
+    font-size: 18px;
+    font-weight: 500;
+    color: #ffdb70;
+}
+
+.devLangList{
+    font-family: var(--fond);
+    font-size: 16px;
+    font-weight: 500;
+    color: #fafafa;
+    margin-left: 30px;
+    margin-top: 30px;   
+}
+
+#p{
+    width: 780px;
+    height: 8px;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+#p::-webkit-progress-bar{
+    background: #3c3c3c;
+    border-radius: 999px;
+}
+
+ #p::-webkit-progress-value{
+    background: linear-gradient(90deg, #FFDB70, #ff8426); 
+    border-radius: 999px;
+  }
+
+.skillsMain{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}

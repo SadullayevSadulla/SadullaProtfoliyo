@@ -1,0 +1,34 @@
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+}
+
+.containerRoute{
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.wrap{
+  display: flex;
+  justify-content: space-between;
+}
+
+.content{
+    width: 900px;
+    height: 100%  ;
+    background: #1e1e1f;
+    border-radius: 20px;
+    border: 1px solid hsl(0, 0%, 22%);
+    margin-block: 60px;
+}
+
+header{
+    display: flex;
+    justify-content: end;
+}
+
+main{
+    padding-bottom: 50px;
+}
