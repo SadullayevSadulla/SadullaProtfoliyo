@@ -1,8 +1,9 @@
+
 export const TestimonialsData = [
     {
         id: 1,
-        name: "Coming con ...",
-        info: "Coming con ..."
+        name: "Daniel lewis",
+        info: "Richard was hired to create a corporate identity. We were very pleased with the work"
     },
     {
         id: 2,

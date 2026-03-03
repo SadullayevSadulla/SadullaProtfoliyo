@@ -3,9 +3,10 @@ import iconDesign from "../../assets/icon-design.svg";
 import iconDesign1 from "../../assets/icon-dev.svg";
 import iconDesign2 from "../../assets/icon-app.svg";
 import iconDesign3 from "../../assets/icon-photo.svg";
-import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import { useState } from 'react';
+import Testimonials from "./aboutTestimonials";
+import Clients from "./aboutClients";
 
 const About = () => {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -40,64 +41,8 @@ const About = () => {
                     <p>I make high-quality photos of any category at a professional level.</p>
                 </div>
             </div>
-            {/* Testimonials Section */}
-            <div className="testimonials">
-                <h3>Testimonials</h3>
-
-                <Swiper
-                    spaceBetween={32}
-                    slidesPerView={2}
-                    onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
-                    className="testimonialsMain"
-                >
-                    <SwiperSlide>
-                        <div className="testimonialsCart">
-                            <div className="tesPick">
-                                <span role="img" aria-label="Daniel Lewis">🧑🏽‍🦱</span>
-                            </div>
-
-                            <div className="testimonialsContent">
-                                <h5>Daniel Lewis</h5>
-                                <p>Richard was hired to create a corporate identity. We were very pleased with the work...</p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-
-                    <SwiperSlide>
-                        <div className="testimonialsCart">
-                            <div className="tesPick">
-                                <span role="img" aria-label="Jessica Miller">👱🏼‍♀️</span>
-                            </div>
-
-                            <div className="testimonialsContent">
-                                <h5>Jessica Miller</h5>
-                                <p>Richard was hired to create a corporate identity. We were very pleased with the work...</p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <div className="testimonialsCart">
-                            <div className="tesPick">
-                                <span role="img" aria-label="Jessica Miller">👱🏼‍♀️</span>
-                            </div>
-
-                            <div className="testimonialsContent">
-                                <h5>Jessica Miller</h5>
-                                <p>Richard was hired to create a corporate identity. We were very pleased with the work...</p>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                </Swiper>
-
-                <div className="testimonials-progress">
-                    <div
-                        className="testimonials-progress-bar"
-                        style={{
-                            width: `${((activeIndex + 1) / 2) * 100}%`
-                        }}
-                    />
-                </div>
-            </div>
+            <Testimonials />
+            <Clients />
         </div>
     </>
 }

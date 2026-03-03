@@ -27,6 +27,7 @@
   box-shadow: 0 4px 24px #00000030;
   width: 100%;              /* min-width o‘rniga */
   min-height: 140px;
+  /* padding: -5px 40px 24px 24px; */
 }
 
 .tesPick {
