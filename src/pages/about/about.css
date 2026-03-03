@@ -1,3 +1,142 @@
+.testimonials h3 {
+  font-family: var(--fond);
+  font-size: 28px;
+  font-weight: 700;
+  color: #fafafa;
+  /* margin-bottom: 24px; */
+}
+
+/* Swiper container'ga FLEX bermaymiz! */
+.testimonialsMain {
+  margin-bottom: 0;
+}
+
+/* Content uchun yangi class */
+.testimonialsContent {
+  margin-left: 100px;
+  /* margin-top: 10px; */
+  text-align: left;
+}
+
+.testimonialsCart {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #202022;
+  border-radius: 22px;
+  box-shadow: 0 4px 24px #00000030;
+  width: 100%;              /* min-width o‘rniga */
+  min-height: 140px;
+}
+
+.tesPick {
+  position: absolute;
+  top: -30px;
+  left: 20px;
+  width: 80px;
+  height: 80px;
+  background-color: #23232b;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 48px;
+  box-shadow: 0 2px 12px #00000020;
+}
+
+.tesPick span {
+  font-size: 48px; /* inline style o‘rniga */
+  line-height: 1;
+}
+
+.testimonialsCart h5 {
+  font-family: var(--fond);
+  font-size: 20px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px 0;
+}
+
+.testimonialsCart p {
+  font-family: var(--fond);
+  color: #d6d6d6;
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+}
+
+.testimonials-progress {
+  width: 100%;
+  height: 6px;
+  background: #23232b;
+  border-radius: 4px;
+  margin-top: 18px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonials-progress-bar {
+  height: 100%;
+  background: #FFD600;
+  border-radius: 4px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: width 0.35s ease;
+}
+
+/* What I'm Doing title */
+.aboutDoingTitle {
+  margin-top: 40px;
+  font-family: var(--fond);
+  font-size: 28px;
+  font-weight: 600;
+  color: #fafafa;
+}
+
+/* What I'm Doing grid */
+.about-doing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* What I'm Doing card */
+.about-doing-card {
+  background: #202022;
+  border-radius: 16px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 2px 16px #00000020;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.about-doing-card span {
+  font-size: 2rem;
+  color: #FFD600;
+}
+.about-doing-card h3 {
+  color: #fff;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: var(--fond);
+}
+.about-doing-card img {
+  width: 40px;
+  height: 40px;
+}
+.about-doing-card p {
+  color: #b0b0b0;
+  margin: 0;
+  font-size: 15px;
+  font-family: var(--fond);
+  font-weight: 300;
+}
 :root {
     --fond: "Inter";
 }
