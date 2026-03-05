@@ -322,3 +322,8 @@
   background: #FFDB70;
   border-radius: 999px;
 }
+
+.clientsCart img{
+  width: 220px;
+  height: 220px;
+}

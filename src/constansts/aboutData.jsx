@@ -1,4 +1,5 @@
-
+import img1 from "../assets/ChatGPT Image Mar 4, 2026, 05_14_53 PM.png"
+import img2 from "../assets/ChatGPT Image Mar 4, 2026, 05_19_36 PM.png"
 export const TestimonialsData = [
     {
         id: 1,
@@ -30,34 +31,10 @@ export const TestimonialsData = [
 export const ClientsData = [
     {
         id: 1,
-        client: "Coming son ...",
+        img1:img1,
     },
     {
         id: 2,
-        client: "Coming son ...",
-    },
-    {
-        id: 3,
-        client: "Coming son ...",
-    },
-    {
-        id: 4,
-        client: "Coming son ...",
-    },
-    {
-        id: 5,
-        client: "Coming son ...",
-    },
-    {
-        id: 6,
-        client: "Coming son ...",
-    },
-    {
-        id: 7,
-        client: "Coming son ...",
-    },
-    {
-        id: 8,
-        client: "Coming son ...",
+        img1:img2,
     },
 ]
