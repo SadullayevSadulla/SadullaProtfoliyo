@@ -1,9 +1,54 @@
 import "./contact.css"
+import { useState } from "react"
+
+const token = "8617382479:AAH699Fex-kZZWFKBNaeEu5-BwZY-dMCe0o"
+const chat_id = "8509171828"
 
 const Contact = () => {
+
+    const [name, setName] = useState("")
+    const [email, setEmail] = useState("")
+    const [message, setMessage] = useState("")
+    const [loading, setLoading] = useState(false)
+    const [success, setSuccess] = useState(false)
+
+    const sendMessage = async (e) => {
+        e.preventDefault()
+
+        setLoading(true)
+
+        const text = `
+📩 <b>New Contact Form</b>
+
+👤 <b>Name:</b> ${name}
+📧 <b>Email:</b> <a href="mailto:${email}">${email}</a>
+💬 <b>Message:</b> ${message}
+`
+
+        await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                chat_id: chat_id,
+                text: text,
+                parse_mode: "HTML"
+            })
+        })
+
+        setLoading(false)
+        setSuccess(true)
+
+        setName("")
+        setEmail("")
+        setMessage("")
+    }
+
     return (
         <div className="contact">
-            <h3 >Contact</h3>
+
+            <h3>Contact</h3>
 
             <div className="contact_map">
                 <iframe
@@ -13,31 +58,64 @@ const Contact = () => {
                     style={{ border: 0 }}
                     allowFullScreen
                     loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+                />
             </div>
+
             <section className="contactForm">
+
                 <h2>Contact Form</h2>
 
-                <form className="contact_form">
+                {success && (
+                    <p className="success_message">
+                        ✅ Message successfully sent!
+                    </p>
+                )}
+
+                <form className="contact_form" onSubmit={sendMessage}>
 
                     <div className="form_row">
-                        <input type="text" placeholder="Full name" />
-                        <input type="email" placeholder="Email address" />
+
+                        <input
+                            type="text"
+                            placeholder="Full name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                        />
+
+                        <input
+                            type="email"
+                            placeholder="Email address"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+
                     </div>
 
-                    <textarea placeholder="Your Message"></textarea>
+                    <textarea
+                        placeholder="Your Message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                    ></textarea>
 
                     <div className="form_btn">
-                        <button type="submit">
-                            ✈ Send Message
+
+                        <button type="submit" disabled={loading}>
+
+                            {loading ? "Sending..." : "✈ Send Message"}
+
                         </button>
+
                     </div>
 
                 </form>
-            </section>
-        </div>
-    );
-};
 
-export default Contact;
+            </section>
+
+        </div>
+    )
+}
+
+export default Contact

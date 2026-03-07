@@ -1,6 +1,5 @@
 import { ClientsData } from "../../constansts/aboutData";
 import "./about.css";
-
 const Clients = () => {
   return (
     <section className="clients">

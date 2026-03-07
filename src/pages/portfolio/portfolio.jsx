@@ -1,6 +1,5 @@
 import { PortfolioData } from "../../constansts/portfolioData";
 import "./portfolio.css"
-
 const Portfolio = () => {
     return <>
         <section className="portfolio">
